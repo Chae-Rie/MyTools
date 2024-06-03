@@ -31,7 +31,6 @@ install(DIRECTORY include/ DESTINATION include)
 
 install(EXPORT MyToolsTargets
         FILE MyToolsTargets.cmake
-        NAMESPACE MyTools::
         DESTINATION lib/cmake/MyTools)
 
 include(CMakePackageConfigHelpers)
