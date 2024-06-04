@@ -24,7 +24,10 @@ message(the name of the lib: ${LIB_NAME})
 add_library(${LIB_NAME} STATIC )
 
 # Sources spezifizieren, alternative zu set(SOURCES)
-target_sources(${LIB_NAME} PRIVATE src/mytools.cpp)
+target_sources(${LIB_NAME} PRIVATE
+    src/mytools.cpp
+    src/fileparser.cpp
+)
 
 
 
@@ -39,6 +42,9 @@ target_include_directories(${LIB_NAME} PUBLIC
 # Alternative zu set (CMAKE_CXX_STANDARD 17) & set (CMAKE_CXX_STANDARD_REQUIRED ON) nur,
 # dass es auf die Targets bezogen werden kann und ein one-liner ist
 target_compile_features(${LIB_NAME} PUBLIC cxx_std_17)
+
+# Setzt das Makro SOURCE_DIR auf das Quellverzeichnis
+add_compile_definitions(SOURCE_DIR="${CMAKE_SOURCE_DIR}")
 
 
 # MyTools_lib installierbar machen -> nur der Output vom target wird installiert, also kontrolliert.
