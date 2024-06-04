@@ -28,6 +28,5 @@ add_executable(TestProjectForOwnPackage main.cpp)
 target_compile_features(TestProjectForOwnPackage PRIVATE cxx_std_17 )
 
 target_link_libraries(TestProjectForOwnPackage PRIVATE MyTools_lib::MyTools_lib)
-
 ```
 

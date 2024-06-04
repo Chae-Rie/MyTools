@@ -1,3 +1,10 @@
+# Purpose of this repo
+MyTools soll eine Ansammlung an einfachen Hilfsfunktionen beinhalten, die ich mit 
+CMake einfach hinzufügen kann.
+
+Im Idealfall reicht ein Call auf `find_package()`, `target_link_libraries()` in Kombination mit
+einem `set(MyTools_lib_DIR <path>)`-Call um die Bibliothek zu nutzen.
+
 # How to install
 
 ```C++
@@ -26,7 +33,8 @@ NewProject/
 └── main.cpp
 ```
 
+Siehe `NewProjectCMakeLists.md` für ein Beispiel wie die dementsprechende CMakeLists.txt
+im neuen Projekt aussehen könnte.
 
-Die CMakeLists.txt in dem neuen Projekt könnte wie folgt aussehen:
 
-
+# Additional Infos
