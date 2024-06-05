@@ -77,14 +77,15 @@ install(EXPORT MyTools_lib_export
         DESTINATION ${MyTools_lib_INSTALL_CMAKEDIR}
 )
 
-# Defines write_basic_package_version_file
+
+
+# Notwendig um write_basic_package_version_file zu callen
 include(CMakePackageConfigHelpers)
-
-
 
 write_basic_package_version_file(
   "MyTools_lib-config-version.cmake"
-  # Package compatibility strategy. SameMajorVersion is essentially `semantic versioning`.
+    # Einrichten einer Versionierung der Pakete, soll nur mit den Hauptversionen gleich der Versions nummer die ich
+    # beim find_package()-Call übergebe
   COMPATIBILITY SameMajorVersion
 )
 
