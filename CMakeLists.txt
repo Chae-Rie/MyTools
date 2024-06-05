@@ -25,7 +25,6 @@ add_library(${LIB_NAME} STATIC )
 
 # Sources spezifizieren, alternative zu set(SOURCES)
 target_sources(${LIB_NAME} PRIVATE
-    src/mytools.cpp
     src/fileparser.cpp
 )
 
