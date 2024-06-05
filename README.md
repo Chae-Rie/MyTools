@@ -17,12 +17,13 @@ Dann in einen eigenen Ordner installieren, wie z.B.: tmp/install auf macos
 `--prefix` gibt an, dass wir in einen bestimmten Ordner installieren
 
 ```
-cmake --install ./build  --prefix /tmp/install
+cmake --install ./build  --prefix /Users/yoocherry/dev/thirdparty/cmake_packages/MyTools-install
 ```
 
-Anschließend ist sind die MyTools systemweit installiert und können via FindPackage()
+
+Anschließend sind die MyTools in dem jeweiligen Verzeichnis installiert und können via FindPackage()
 in neue Projekte eingebunden werden.
-**ABER** weil Du das Projekt in einem best
+
 Beachte, dass es sich um eine statisch gelinkte Bibliothek handelt.
 
 
