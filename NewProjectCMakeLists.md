@@ -2,7 +2,7 @@ Die CMakeLists.txt für das Projekt, was die MyTools Bibliothek als CMake-Paket 
 Hierbei wird die dementsprechende Config-Datei verwendet. 
 
 Besonders wichtig ist hier die Zeile:
-`set(MyTools_lib_DIR "/tmp/install-test/cmake")` die auf das Verzeichnis zeigt
+`set(MyTools_lib_DIR "/Users/yoocherry/dev/thirdparty/cmake_packages/MyTools-install")` die auf das Verzeichnis zeigt
 was die Config und cmake Files, die beim Installieren erzeugt worden sind.
 
 ```CMake
@@ -20,7 +20,7 @@ if(NOT PROJECT_IS_TOP_LEVEL)
   message(FATAL_ERROR "project is intended to be a standalone, top-level project. Do not vendor this directory.")
 endif()
 
-set(MyTools_lib_DIR "/tmp/install-test/cmake")
+set(MyTools_lib_DIR "/Users/yoocherry/dev/thirdparty/cmake_packages/MyTools-install")
 find_package(MyTools_lib 1 CONFIG REQUIRED)
 
 add_executable(TestProjectForOwnPackage main.cpp)
