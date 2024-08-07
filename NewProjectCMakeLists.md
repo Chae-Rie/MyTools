@@ -20,7 +20,7 @@ if(NOT PROJECT_IS_TOP_LEVEL)
   message(FATAL_ERROR "project is intended to be a standalone, top-level project. Do not vendor this directory.")
 endif()
 
-set(MyTools_lib_DIR "/Users/yoocherry/dev/thirdparty/cmake_packages/MyTools-install")
+set(MyTools_lib_DIR "/Users/yoocherry/dev/thirdparty/cmake_packages/MyTools-install/cmake")
 find_package(MyTools_lib 1 CONFIG REQUIRED)
 
 add_executable(TestProjectForOwnPackage main.cpp)
