@@ -1,0 +1,9 @@
+{
+  "name" : "mytools",
+  "version-string" : "1.0.0",
+  "builtin-baseline" : "2f9712e0f5a31106f830031ca9f6d6085956e1c4",
+  "dependencies" : [ {
+    "name" : "nlohmann-json",
+    "version>=" : "3.11.3#1"
+  } ]
+}
