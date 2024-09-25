@@ -9,18 +9,10 @@
 
 
 // ---------------
-namespace MyTools{
-
-    namespace Fileparser{
-
-    // Nutze die in der CMakeLists.txt formulierte Info über das Source-Directory
-    // trage das hier ein: add_compile_definitions(SOURCE_DIR="${CMAKE_SOURCE_DIR}"))
-    inline std::string GetSourceDirPath(){return std::string(SOURCE_DIR);};
+    namespace MyTools::Fileparser{
     std::unordered_map<std::string, std::string> parseEnvFile(const std::string& filePath);
     std::string getValueByKey(const std::unordered_map<std::string, std::string>& envMap, const std::string& key);
 
     }
-
-}
 
 #endif //FILEPARSER_H

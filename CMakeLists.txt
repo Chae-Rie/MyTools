@@ -47,6 +47,7 @@ find_package(nlohmann_json CONFIG REQUIRED)
 target_sources(${LIB_NAME} PRIVATE
         src/fileparser.cpp
         src/jsonmanager.cpp
+        src/misc.cpp
 )
 
 target_link_libraries(${LIB_NAME} PRIVATE nlohmann_json::nlohmann_json)

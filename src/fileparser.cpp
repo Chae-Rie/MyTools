@@ -1,7 +1,5 @@
 #include "../include/MyTools/fileparser.h"
-namespace MyTools{
-
-    namespace Fileparser{
+    namespace MyTools::Fileparser{
 
         // Funktion zum Parsen der .env-Datei
         std::unordered_map<std::string, std::string> parseEnvFile(const std::string& filePath) {
@@ -55,4 +53,4 @@ namespace MyTools{
             }
         }
     } // end namespace Fileparser
-} // end namespace MyTools
+// end namespace MyTools
