@@ -14,6 +14,8 @@ using json = nlohmann::json;
         json ReadFile(const std::string& fileName);
         json GetObjectFromArray(const json& config, const std::string& key, int index = 0);
         std::string GetStringValue(const json& jsonObj, const std::string& key, const std::string& defaultValue = "");
+        int GetIntValue(const json& jsonObj, const std::string& key, int defaultValue = 0);
+        json getDatabaseConfig(const json& config, const std::string& mode);
     }
 
 #endif //JSONMANAGER_H

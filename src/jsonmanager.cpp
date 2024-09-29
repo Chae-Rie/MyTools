@@ -40,4 +40,16 @@ namespace MyTools::JsonManager {
     std::string GetStringValue(const json &jsonObj, const std::string &key, const std::string &defaultValue ){
         return jsonObj.value(key, defaultValue);
     }
+
+    int GetIntValue(const json &jsonObj, const std::string &key, int defaultValue) {
+        return jsonObj.value(key, defaultValue);
+    }
+
+    json getDatabaseConfig(const json& config, const std::string& mode) {
+    if (config.contains("databaseConfig") && config["databaseConfig"].contains(mode)) {
+        return config["databaseConfig"][mode];
+    } else {
+        throw std::runtime_error("Invalid mode or missing database configuration.");
+    }
+}
 }
